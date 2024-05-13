@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width:100vw;
+            height:100vh;
+            width:100vw;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 22px;
+        }
+        button{
+            cursor: pointer;
+            color:royalblue;
+            background-color: black;
+            border-radius: 12px;
+            padding:6px;
+            
+        }
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="box ">
+        <div class="b1">
+<h1>Background Color: <small></small></h1>
+</div>
+<div class="b2">
+    <button>Click me </button>
+</div>
+    </div>
+
+    <script>
+        let d=document.querySelector("button");
+        let g=document.querySelector(".box");
+let f=document.querySelector("small");
+       d.addEventListener("click",function()
+    {
+    let a=Math.random()*256;
+    a=Math.floor(a);
+    let b=Math.random()*256;
+    b=Math.floor(b);
+    let c=Math.random()*256;
+    c=Math.floor(c);
+    const r= `rgb(${a},${b},${c})`
+f.innerHTML=r;
+    g.style.backgroundColor=r;
+    
+    });
+
+    </script>
+</body>
+</html>
